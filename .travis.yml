@@ -1,0 +1,15 @@
+---
+language: ruby
+cache:    bundler
+script:   bundle  exec rspec
+rvm:
+  - '2.2'
+  - '2.3'
+  - ruby-head
+  - rbx-2
+  - jruby-9
+  - jruby-head
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+    - rvm: jruby-head
